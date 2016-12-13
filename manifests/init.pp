@@ -96,10 +96,6 @@ define concat(
   if $selinux_ignore_defaults {
     validate_bool($selinux_ignore_defaults)
   }
-  validate_string($selrange)
-  validate_string($selrole)
-  validate_string($seltype)
-  validate_string($seluser)
 
   $safe_name            = regsubst($name, '[/:~\n\s\+\*\(\)]', '_', 'G')
   $default_warn_message = "# This file is managed by Puppet. DO NOT EDIT.\n"
