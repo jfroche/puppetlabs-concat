@@ -37,9 +37,6 @@ define concat::fragment(
 ) {
   validate_string($target)
   validate_string($content)
-  if !(is_string($source) or is_array($source)) {
-    fail('$source is not a string or an Array.')
-  }
   if !(is_string($order) or is_integer($order)) {
     fail('$order is not a string or integer.')
   } elsif (is_string($order) and $order =~ /[:\n\/]/) {
